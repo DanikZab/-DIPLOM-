@@ -3,21 +3,77 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #1a1a1a; /* Темный фон */
+    background: #1a1a1a;
     color: #fff;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-/* Контейнер формы */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.slider {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.forms {
+    width: 45%;
+}
+
 .form-container {
-    max-width: 300px;
     width: 100%;
     padding: 30px;
-    background: #2a2a2a; /* Темный контейнер */
+    background: #2a2a2a;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -112,32 +168,24 @@ a:hover {
     color: #f44336;
 }
 
-/* Анимации */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Профиль */
-#profile {
+/* Описание дипломного сайта */
+.about {
+    width: 100%;
+    padding: 50px 0;
+    background: #2a2a2a;
+    margin-top: 50px;
     text-align: center;
 }
 
-#profile p {
-    font-size: 18px;
+.about h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
-#logout {
-    background: #f44336;
-}
-
-#logout:hover {
-    background: #d32f2f;
+.about p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
