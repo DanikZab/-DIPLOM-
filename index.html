@@ -7,40 +7,76 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="register-form" class="form-container">
-        <h2>Регистрация</h2>
-        <form id="register">
-            <label for="reg-username">Логин:</label>
-            <input type="text" id="reg-username" required>
+    <div class="container">
+        <!-- Слайдер -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://source.unsplash.com/800x600/?web,design" alt="Web Design">
+                </div>
+                <div class="slide">
+                    <img src="https://source.unsplash.com/800x600/?ui,ux" alt="UI/UX Design">
+                </div>
+                <div class="slide">
+                    <img src="https://source.unsplash.com/800x600/?code,development" alt="Coding">
+                </div>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
 
-            <label for="reg-password">Пароль:</label>
-            <input type="password" id="reg-password" required>
+        <!-- Формы -->
+        <div class="forms">
+            <div id="register-form" class="form-container">
+                <h2>Регистрация</h2>
+                <form id="register">
+                    <label for="reg-username">Логин:</label>
+                    <input type="text" id="reg-username" required>
 
-            <button type="submit">Зарегистрироваться</button>
-        </form>
-        <p>Уже есть аккаунт? <a href="#" id="show-login">Войти</a></p>
+                    <label for="reg-password">Пароль:</label>
+                    <input type="password" id="reg-password" required>
+
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+                <p>Уже есть аккаунт? <a href="#" id="show-login">Войти</a></p>
+            </div>
+
+            <div id="login-form" class="form-container hidden">
+                <h2>Вход</h2>
+                <form id="login">
+                    <label for="login-username">Логин:</label>
+                    <input type="text" id="login-username" required>
+
+                    <label for="login-password">Пароль:</label>
+                    <input type="password" id="login-password" required>
+
+                    <button type="submit">Войти</button>
+                </form>
+                <p>Нет аккаунта? <a href="#" id="show-register">Зарегистрироваться</a></p>
+            </div>
+
+            <div id="profile" class="form-container hidden">
+                <h2>Профиль</h2>
+                <p>Добро пожаловать, <span id="username"></span>!</p>
+                <p>Вы будете перенаправлены на главную страницу через 3 секунды...</p>
+            </div>
+        </div>
     </div>
 
-    <div id="login-form" class="form-container hidden">
-        <h2>Вход</h2>
-        <form id="login">
-            <label for="login-username">Логин:</label>
-            <input type="text" id="login-username" required>
-
-            <label for="login-password">Пароль:</label>
-            <input type="password" id="login-password" required>
-
-            <button type="submit">Войти</button>
-        </form>
-        <p>Нет аккаунта? <a href="#" id="show-register">Зарегистрироваться</a></p>
+    <!-- Описание дипломного сайта -->
+    <div class="about">
+        <div class="container">
+            <h2>О моем дипломном сайте</h2>
+            <p>
+                Мой дипломный проект — это современный веб-сайт, посвященный веб-дизайну и разработке. 
+                Он включает в себя интерактивные элементы, анимации и адаптивный дизайн, чтобы обеспечить 
+                удобство использования на всех устройствах. Сайт создан с использованием HTML, CSS, 
+                JavaScript и современных библиотек для анимаций.
+            </p>
+        </div>
     </div>
 
-    <div id="profile" class="form-container hidden">
-        <h2>Профиль</h2>
-        <p>Добро пожаловать, <span id="username"></span>!</p>
-        <button id="logout">Выйти</button>
-    </div>
-
+    <!-- Сообщения -->
     <div id="response-message" class="message"></div>
 
     <script src="scripts.js"></script>
