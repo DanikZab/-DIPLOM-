@@ -1,0 +1,143 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a; /* Темный фон */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Контейнер формы */
+.form-container {
+    max-width: 300px;
+    width: 100%;
+    padding: 30px;
+    background: #2a2a2a; /* Темный контейнер */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.form-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+p {
+    margin-top: 15px;
+    color: #ccc;
+}
+
+a {
+    color: #28a745;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #218838;
+}
+
+/* Сообщения */
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
+
+.message.success {
+    background: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+}
+
+.message.error {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Профиль */
+#profile {
+    text-align: center;
+}
+
+#profile p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#logout {
+    background: #f44336;
+}
+
+#logout:hover {
+    background: #d32f2f;
+}
